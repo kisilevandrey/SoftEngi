@@ -32,13 +32,13 @@ h1{
     outline: none;
 }
 
-.contact_form{
+.contact_form, .profile_form{
     position: absolute;
     top:180px;
     left: 360px;
 }
 
-.contact_form h2, .contact_form label {
+.contact_form h2, .contact_form label, .profile_form h2, .profile_form label {
     font-family:'Orbitron', sans-serif;
 }
 
@@ -46,7 +46,7 @@ h1{
     font-size: 11px;
 }
 
-.contact_form ul {
+.contact_form ul, .profile_form ul {
     width: 650px;
     list-style-type: none;
     list-style-position: outside;
@@ -54,17 +54,17 @@ h1{
     padding: 0px;
 }
 
-.contact_form li{
+.contact_form li, .profile_form li{
       padding:12px;
       border-bottom:1px solid #eee;
       position:relative;
 }
 
-.contact_form li:first-child, .contact_form li:last-child {
+.contact_form li:first-child, .contact_form li:last-child, .profile_form li:first-child, .profile_form li:last-child {
     border-bottom:1px solid #777;
 }
 
-.contact_form h2 {
+.contact_form h2, .profile_form h2 {
     margin-left: 200px;
     display: inline;
 }
@@ -76,7 +76,7 @@ h1{
       float:right;
 }
 
-.contact_form label {
+.contact_form label, .profile_form label {
     width: 150px;
     margin-top: 3px;
     display: inline-block;
@@ -84,21 +84,21 @@ h1{
     padding: 3px;
 }
 
-.contact_form input {
+.contact_form input, .profile_form input {
     height:20px;
     width:220px;
     padding:5px 8px;
 }
 
-.contact_form textarea {
+.contact_form textarea, .profile_form textarea {
     padding:8px; width:300px;
 }
 
-.contact_form button {
+.contact_form button, .profile_form button {
     margin-left:156px;
 }
 
-.contact_form input, .contact_form textarea {
+.contact_form input, .contact_form textarea, .profile_form input, .profile_form textarea {
     border:1px solid #aaa;
     box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
     border-radius:2px;
@@ -155,6 +155,13 @@ button.home{
     left: 20px;
 }
 
+button.profile {
+    padding: 3px 7px;
+    position: absolute;
+    top: 108px;
+    right: 15px;
+}
+
 .login_form{
     position: absolute;
     top:300px;
@@ -170,7 +177,7 @@ button.home{
 .login_form input[type="text"],.login_form input[type="password"] {
     width: 100%;
     height: 40px;
-    positon: relative;
+    position: relative;
     margin-top: 7px;
     font-size: 14px;
     color: #000000;
@@ -226,7 +233,7 @@ button.home{
     padding-right:70px;
 }
 
-.contact_form input, .contact_form textarea {
+.contact_form input, .profile_form input, .contact_form textarea {
     transition: padding .25s;
     padding-right:30px;
 }
@@ -236,13 +243,13 @@ input:required, textarea:required {
 }
 
 .contact_form input:focus:invalid, .contact_form textarea:focus:invalid {
-    background: #fff url(images/invalid.png) no-repeat 98% center;
+    background: #fff no-repeat 98% center;
     box-shadow: 0 0 5px #d4683c;
     border-color: #b0525e
 }
 
-.contact_form input:required:valid, .contact_form textarea:required:valid {
-    background: #fff url(images/valid.png) no-repeat 98% center;
+.contact_form input:required:valid, .contact_form textarea:required:valid{
+    background: #fff no-repeat 98% center;
     box-shadow: 0 0 5px #5cd053;
     border-bottom-color: #28921f;
 }
@@ -257,7 +264,6 @@ section{
     border-radius: 20px;
     padding: 20px;
     font-family:'Orbitron', sans-serif;
-    /*background-color: rgba(107, 107, 107, 0.68);*/
 }
 
 section h4{
