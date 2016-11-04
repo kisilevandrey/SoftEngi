@@ -32,13 +32,14 @@ h1{
     outline: none;
 }
 
-.contact_form, .profile_form{
+.contact_form, .profile_form, .restore_pass{
     position: absolute;
     top:180px;
     left: 360px;
 }
 
-.contact_form h2, .contact_form label, .profile_form h2, .profile_form label {
+.contact_form h2, .contact_form label, .profile_form h2,
+.profile_form label, .restore_pass h2, .restore_pass label {
     font-family:'Orbitron', sans-serif;
 }
 
@@ -46,7 +47,7 @@ h1{
     font-size: 11px;
 }
 
-.contact_form ul, .profile_form ul {
+.contact_form ul, .profile_form ul, .restore_pass ul {
     width: 650px;
     list-style-type: none;
     list-style-position: outside;
@@ -54,17 +55,18 @@ h1{
     padding: 0px;
 }
 
-.contact_form li, .profile_form li{
+.contact_form li, .profile_form li, .restore_pass li{
       padding:12px;
       border-bottom:1px solid #eee;
       position:relative;
 }
 
-.contact_form li:first-child, .contact_form li:last-child, .profile_form li:first-child, .profile_form li:last-child {
+.contact_form li:first-child, .contact_form li:last-child, .profile_form li:first-child,
+.profile_form li:last-child, .restore_pass li:first-child, .restore_pass li:last-child {
     border-bottom:1px solid #777;
 }
 
-.contact_form h2, .profile_form h2 {
+.contact_form h2, .profile_form h2, .restore_pass h2 {
     margin-left: 200px;
     display: inline;
 }
@@ -76,7 +78,7 @@ h1{
       float:right;
 }
 
-.contact_form label, .profile_form label {
+.contact_form label, .profile_form label, .restore_pass label {
     width: 150px;
     margin-top: 3px;
     display: inline-block;
@@ -84,13 +86,13 @@ h1{
     padding: 3px;
 }
 
-.contact_form input, .profile_form input {
+.contact_form input, .profile_form input, .restore_pass input {
     height:20px;
     width:220px;
     padding:5px 8px;
 }
 
-.contact_form textarea, .profile_form textarea {
+.contact_form textarea, .profile_form textarea, .restore_pass textarea {
     padding:8px; width:300px;
 }
 
@@ -98,7 +100,8 @@ h1{
     margin-left:156px;
 }
 
-.contact_form input, .contact_form textarea, .profile_form input, .profile_form textarea {
+.contact_form input, .contact_form textarea, .profile_form input,
+.profile_form textarea, .restore_pass input, .restore_pass textarea {
     border:1px solid #aaa;
     box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
     border-radius:2px;
@@ -160,6 +163,18 @@ button.profile {
     position: absolute;
     top: 108px;
     right: 15px;
+}
+
+button.forgot_pass{
+    padding: 3px 7px;
+    border-radius: 3px;
+    position: absolute;
+    top: 520px;
+    right: 518px;
+}
+
+.restore_pass button{
+    margin-left:280px;
 }
 
 .login_form{
@@ -248,7 +263,8 @@ input:required, textarea:required {
     border-color: #b0525e
 }
 
-.contact_form input:required:valid, .contact_form textarea:required:valid{
+.contact_form input:required:valid, .contact_form textarea:required:valid,
+.restore_pass input:required:valid, .restore_pass textarea:required:valid{
     background: #fff no-repeat 98% center;
     box-shadow: 0 0 5px #5cd053;
     border-bottom-color: #28921f;
@@ -282,4 +298,14 @@ footer {
     left: 0;
     width: 100%;
     height: 20px;
+}
+
+.image{
+    position: absolute;
+    width: 192;
+    height: 192;
+    top: 230px;
+    left: 140px;
+
+
 }
