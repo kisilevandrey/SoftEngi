@@ -5,6 +5,24 @@
     <title>Login Page</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
+<script>
+    function validate() {
+        var username = document.getElementById("UserName");
+        var password = document.getElementById("UserPassword");
+
+        if(!username.value) {
+            UserName.style.border = "2px solid red";
+            return false;
+        }
+
+        if(!password.value) {
+            UserPassword.style.border = "2px solid red";
+            return false;
+        }
+
+        return true;
+    }
+</script>
 <body>
 <header>
     <h1>WebBest</h1>
@@ -20,9 +38,9 @@
 
 </header>
 
-<form class="login_form" action="" method="post" name="login_form">
-    <label for="username">Логин:</label><input type="text" name="username"  placeholder="admin@example.com">
-    <label for="password">Пароль:</label><input type="password" name="password" placeholder="Пароль...">
+<form class="login_form" action="" method="post" name="login_form" onsubmit="return validate()">
+    <label for="username">Логин:</label><input type="text" id="UserName"  placeholder="admin@example.com">
+    <label for="password">Пароль:</label><input type="password" id="UserPassword" placeholder="Пароль...">
     <input type="submit" value="Войти">
 </form>
 <form>
@@ -30,6 +48,7 @@
         <button class="forgot_pass" type="button">Забыли пароль?</button>
     </a>
 </form>
+
 <footer>
     Copyright © Andrey Kisilev 2016
 </footer>
